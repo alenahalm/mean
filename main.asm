@@ -144,7 +144,7 @@ _result:
     div ebx
     const_print "Среднее арифметическое разности двух массивов: "
     printd
-    putchar ','
+    putchar '.'
     decimal edx, array_len
     printd
 
@@ -155,8 +155,8 @@ _result:
     EXIT 0
 
 section .data
-    x dd 25, 3, 2, 6, 1, 7, 4 ;48
-    y dd 0, 10, 1, 9, 2, 8, 5 ; 35
+    x dd 5, 3, 2, 6, 1, 7, 4
+    y dd 0, 10, 1, 9, 2, 8, 5
     array_len equ ($ - y) / 4
     message db "Done!"
     len equ $ - message
@@ -166,3 +166,4 @@ section .bss
     y_sum resb 10
     result_integer resb 5
     result_decimal resb 1
+Footer
